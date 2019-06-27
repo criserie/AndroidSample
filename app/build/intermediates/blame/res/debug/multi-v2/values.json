@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Cris\\CloudStation\\dell\\AndroidStudioProjects\\AndroidSample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Cris\\AndroidStudioProjects\\AndroidSample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-2\\files-2.1\\9c73a6d25b49cd0d941c7fae867ee925\\res\\values\\values.xml",
@@ -95,6 +95,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Cris\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,1,4,3",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "69,17,179,123",
+                        "endColumns": "52,50,58,54",
+                        "endOffsets": "117,63,233,173"
+                    },
+                    "to": {
+                        "startLines": "401,402,406,407",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "24639,24692,25096,25155",
+                        "endColumns": "52,50,58,54",
+                        "endOffsets": "24687,24738,25150,25205"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-2\\files-2.1\\be5ee0772ef307c08bfd866bf254fb6f\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,53,54,58,59,60,6,15",
@@ -114,24 +131,26 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cris\\CloudStation\\dell\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\Cris\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "2,1,4,3",
+                        "startLines": "3,15,10,17",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "69,17,179,123",
-                        "endColumns": "52,50,58,54",
-                        "endOffsets": "117,63,233,173"
+                        "startOffsets": "57,540,384,634",
+                        "endLines": "8,15,13,17",
+                        "endColumns": "12,90,12,80",
+                        "endOffsets": "376,626,532,710"
                     },
                     "to": {
-                        "startLines": "401,402,406,407",
+                        "startLines": "424,430,431,435",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "24639,24692,25096,25155",
-                        "endColumns": "52,50,58,54",
-                        "endOffsets": "24687,24738,25150,25205"
+                        "startOffsets": "26878,27197,27287,27437",
+                        "endLines": "429,430,434,435",
+                        "endColumns": "12,89,12,79",
+                        "endOffsets": "27192,27282,27432,27512"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cris\\CloudStation\\dell\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\dimens.xml",
+                    "source": "C:\\Users\\Cris\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -148,7 +167,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cris\\CloudStation\\dell\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\Cris\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -162,25 +181,6 @@
                         "startOffsets": "6234,6280,6327",
                         "endColumns": "45,46,50",
                         "endOffsets": "6275,6322,6373"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Cris\\CloudStation\\dell\\AndroidStudioProjects\\AndroidSample\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,15,10,17",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "57,540,384,634",
-                        "endLines": "8,15,13,17",
-                        "endColumns": "12,90,12,80",
-                        "endOffsets": "376,626,532,710"
-                    },
-                    "to": {
-                        "startLines": "424,430,431,435",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "26878,27197,27287,27437",
-                        "endLines": "429,430,434,435",
-                        "endColumns": "12,89,12,79",
-                        "endOffsets": "27192,27282,27432,27512"
                     }
                 },
                 {
