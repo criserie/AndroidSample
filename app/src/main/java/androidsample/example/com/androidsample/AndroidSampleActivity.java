@@ -1,6 +1,8 @@
 package androidsample.example.com.androidsample;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -33,33 +35,53 @@ public class AndroidSampleActivity extends AppCompatActivity {
         });
         final TextView myView = findViewById(R.id.textView);
         Button button = findViewById(R.id.button_id);
-        final SmsManager smsManager = SmsManager.getDefault();
+        final  SmsManager smsManager = SmsManager.getDefault();
+
+        final SMSHandler mySMSHandler = new SMSHandler(smsManager, myView);
+
+        final  Handler myHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg)
+        {
+            if(msg.what == 1)
+                myView.setText("handled delayed message");
+
+            else
+                myView.setText("handled!");
+
+        }
+        };
+        final Message myMessage = myHandler.obtainMessage(1);
+
 
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(!myView.getText().equals("changed"))
-                    myView.setText("changed");
-                else
-                    myView.setText("Changed Back!!!");
+                //SMSHandler mySMSHandler = new SMSHandler(smsManager, myView);
 
-                while(messagenum <= 7)
-                {
-                    int breakTimer = 0;
-                    try {
-                        smsManager.sendTextMessage("520-881-0062", null, "I just built an app that will send you this message 7 times, this is Text " + messagenum + " of 7.", null, null);
-                    } catch (IllegalArgumentException ie) {
-                        myView.setText("IllegalArgumentException Thrown");
-                    }
 
-                    while (breakTimer < 1000000000)
-                    {
-                        breakTimer++;
-                    }
+
+                //myView.setText("Sending message "+messagenum);
+                mySMSHandler.sendMessageDelayed(myMessage, 2000);
+                //mySMSHandler.sendEmptyMessageDelayed(1,5000);
+                //myHandler.sendMessageDelayed(myMessage, 5000);
+               //myHandler.sendEmptyMessageDelayed(2,10000);
+
+
+
+
+
+
+
+
+
+
+
+                    //myView.setText("Message sent "+messagenum+" times.");
                     messagenum++;
                 }
 
-            }
+
         });
     }
 
@@ -84,4 +106,35 @@ public class AndroidSampleActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public class SMSHandler extends Handler
+    {
+        SmsManager mySM;
+        TextView myTV;
+        int times;
+        public SMSHandler(SmsManager s, TextView v)
+        {
+            super();
+            mySM = s;
+            myTV = v;
+        }
+
+        @Override
+        public void handleMessage(Message msg)
+        {
+            super.handleMessage(msg);
+
+                mySM.sendTextMessage("520-881-0062", null, "I just built an app that will send you this message 7 times, this is Text " + messagenum + " of 7.", null, null);
+            if(msg.what == 1)
+                myTV.setText("handled delayed message "+times+" times");
+
+            //else
+              //  myTV.setText("handled! "+times+" times");
+
+        }
+    }
+
 }
+
+
