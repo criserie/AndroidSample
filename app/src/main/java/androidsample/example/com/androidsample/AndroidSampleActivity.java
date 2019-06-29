@@ -37,42 +37,53 @@ public class AndroidSampleActivity extends AppCompatActivity {
         Button button = findViewById(R.id.button_id);
         final  SmsManager smsManager = SmsManager.getDefault();
 
-        final SMSHandler mySMSHandler = new SMSHandler(smsManager, myView);
+        //final SMSHandler mySMSHandler = new SMSHandler(smsManager, myView);
 
-        final  Handler myHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg)
-        {
-            if(msg.what == 1)
-                myView.setText("handled delayed message");
 
-            else
-                myView.setText("handled!");
 
-        }
-        };
-        final Message myMessage = myHandler.obtainMessage(1);
 
 
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //SMSHandler mySMSHandler = new SMSHandler(smsManager, myView);
+                Handler myHandler = new Handler(){
+                    @Override
+                    public void handleMessage(Message msg)
+                    {
+                        if(msg.what == 1)
+                        {
+                            try
+                            {
+                                smsManager.sendTextMessage("520-881-0062", null, "I just built an app that will send you this message 7 times, this is Text " + messagenum + " of 7.", null, null);
+                            } catch (IllegalArgumentException ie)
+                            {
+                                myView.setText("IllegalArgumentException Thrown");
+                            }
+                            myView.setText("handled delayed message");
+                        }
 
+
+                        else if (msg.what == 2) {
+                            try
+                            {
+                                smsManager.sendTextMessage("520-881-0062", null, "I just built an app that will send you this message 7 times, this is Text " + messagenum + " of 7.", null, null);
+                            } catch (IllegalArgumentException ie)
+                            {
+                                myView.setText("IllegalArgumentException Thrown");
+                            }
+                            myView.setText("handled another delayed message!");
+                        }
+
+                    }
+                };
 
 
                 //myView.setText("Sending message "+messagenum);
-                mySMSHandler.sendMessageDelayed(myMessage, 2000);
-                //mySMSHandler.sendEmptyMessageDelayed(1,5000);
+                myHandler.sendEmptyMessageDelayed(1, 2000);
+                myHandler.sendEmptyMessageDelayed(2,5000);
                 //myHandler.sendMessageDelayed(myMessage, 5000);
                //myHandler.sendEmptyMessageDelayed(2,10000);
-
-
-
-
-
-
-
 
 
 
