@@ -835,6 +835,9 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id disableHome
+id editText
+id editText2
+id editText3
 id edit_query
 id end
 id end_padder
@@ -935,6 +938,8 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
+id textView2
+id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
