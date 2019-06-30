@@ -837,7 +837,6 @@ id design_navigation_view
 id disableHome
 id editText
 id editText2
-id editText3
 id edit_query
 id end
 id end_padder
@@ -881,6 +880,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id np
 id packed
 id parallax
 id parent
@@ -939,7 +939,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
 id textView2
-id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
